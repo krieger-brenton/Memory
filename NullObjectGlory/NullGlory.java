@@ -1,18 +1,21 @@
+/**********************************************************
+ * This is the Null Object it overwrites the isNull function
+ * from its superclass and then has the run method do 
+ * nothing.
+ **********************************************************/
 public class NullGlory
 	extends AbstGlory
 {
-	public NullGlory(String pName)
-	{
-		name = pName;
-	}
-	
+
 	public void run()
 	{
-		System.out.println("There is no Glory in " + name + "!");
+		// I do nothing
 	}
 	
 	public boolean isNull()
 	{
-		return false;
+		// This is for the user to test for a null object 
+		// if they need to
+		return true;
 	}
 }

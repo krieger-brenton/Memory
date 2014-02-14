@@ -2,16 +2,16 @@ public class GloryFactory
 {
 	public AbstGlory getGlory(String pName)
 	{
-		String[] NamesOfGlory = { "Valor", "Might", "Wisdom" };
-		
-		for(String glory : NamesOfGlory)
-		{
-			if (glory == pName)
-			{
-				return new RealGlory(pName);
-			}
-		}
-		
-		return new NullGlory(pName);
+		switch(pName)
+	      {
+	         case "Noble":
+	            return new Nobleness();
+	         case "Might":
+	            return new Mightiness();
+	         case "Wisdom":
+	            return new Wisdomness();
+	         default:
+	            return new NullGlory();
+	      }		
 	}
 }
